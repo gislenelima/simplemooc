@@ -22,3 +22,11 @@ class Course(models.Model):
     update_at = models.DateTimeField('Atualizado em', auto_now = True)
 
     objects = CourseManager()
+
+    def __str__(self): # formata os nomes na listagem do admin, deixa bonitinho  admin/course
+        return self.name
+
+    class Meta:
+        verbose_name = 'Curso'
+        verbose_name_plural = 'Cursos'
+        ordering = ['name']#ordenar no painel do admin em ordem decrescente
