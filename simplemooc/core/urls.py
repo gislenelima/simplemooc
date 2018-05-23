@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include,url
+from simplemooc.core import views
 admin.autodiscover()
 
 urlpatterns = [
-    path('', include('core.urls')),
-    path('admin/', include(admin.site.urls)),
+    path('', views.home, name='home'),
+    path('contact/',views.contact, name='contact'),
 ]
+
