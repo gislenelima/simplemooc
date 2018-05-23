@@ -123,4 +123,15 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'  
+
+# UPLOAD DE IMAGEM
+# - entrar na URL principal
+#  	. importar 
+#    	     from django.conf import settings
+# 	. acrescentar ao fim de urlpatterns 
+# 	      + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# 	. acrescentar o settings.py ao fim da página
+# 	      MEDIA_URL = '/media/'		
+
