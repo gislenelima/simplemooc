@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'simplemooc.core',
     'simplemooc.courses',
+    
 ]
 
 MIDDLEWARE = [
@@ -121,4 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc','media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
+MEDIA_URL = '/media/'
