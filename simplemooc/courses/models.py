@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class CourseManager (models.Manager):
@@ -27,9 +28,11 @@ class Course(models.Model):
     def __str__(self): # formata os nomes na listagem do admin, deixa bonitinho  admin/course
         return self.name
     
-    @models.permalink
+    # @models.permalink
+    # def get_absolute_url(self):
+    #     return ('details', (), {'slug':self.slug} )
     def get_absolute_url(self):
-        return ('details', (), {'slug':self.slug} )
+        return reverse('details', kwargs={'slug': self.slug})
 
     class Meta:
         verbose_name = 'Curso'
