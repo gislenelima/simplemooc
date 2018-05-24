@@ -15,7 +15,7 @@
 <div class="pure-g-r content-ribbon">
     <div class="pure-u-1-3">
         <div class="l-box">
-            <a href="{{ course.get_absolute_url }}">  
+            <a href="{{ course.get_absolute_url }}">  <!--posso usar também:: %url 'details' course.slug% ::vai chamar o método para linkar as págigas geral com detalhe-->
             {% if course.image %}
             <img src="{{ course.image.url }}" alt="{{ course.name }}" />
             {% else %}

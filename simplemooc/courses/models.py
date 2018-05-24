@@ -26,6 +26,10 @@ class Course(models.Model):
 
     def __str__(self): # formata os nomes na listagem do admin, deixa bonitinho  admin/course
         return self.name
+    
+    @models.permalink
+    def get_absolute_url(self):
+        return ('details', (), {'slug':self.slug} )
 
     class Meta:
         verbose_name = 'Curso'
