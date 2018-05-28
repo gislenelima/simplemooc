@@ -10,7 +10,7 @@ class RegisterForm(UserCreationForm):#está herdando os atribultos de UserCreati
         email = self.cleaned_data['email']
         if User.objects.filter(email=email).exists():
             raise forms.ValidationError('Já existe usuário com este E-mail')
-            return email
+        return email
 
     def save (self, commit = True):
         user = super(RegisterForm, self).save(commit = False) 
@@ -18,5 +18,6 @@ class RegisterForm(UserCreationForm):#está herdando os atribultos de UserCreati
         if commit: 
             user.save()
         return user
+
 
     

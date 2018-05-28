@@ -19,7 +19,6 @@ def register(request):
                 username = user.username, password = form.cleaned_data['password1']
             )
             login (request, user) #colocará o usuario na sessao
-            
             return redirect(settings.LOGIN_URL) #faz redirecionamento para a page de login
             
     else:
