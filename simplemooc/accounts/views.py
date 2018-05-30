@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm, EditAccountForm, PasswordResetForm
 from .models import PasswordReset
 from simplemooc.core.utils import generate_hash_key
-
+from django.contrib import messages
 
 # Create your views here.
 
@@ -26,8 +26,8 @@ def edit (request):
         form = EditAccountForm(request.POST,instance=request.user)
         if form.is_valid():
             form.save()
-            form = EditAccountForm(instance=request.user)
-            context['sucess']= True
+            messages.success(request, 'Os dados da sua conta foram alterados com sucesso')
+            return redirect('dashboard')
 
     else: 
         form = EditAccountForm(instance=request.user)
