@@ -5,8 +5,6 @@ from simplemooc.courses import views
 
 urlpatterns = [
     path('', views.index, name = 'index'),
-  # path('<int:pk>/detail',views.details, name = 'details') #nova forma normal
-    path('<slug>/detail',views.details, name = 'details') #nova forma normal
-    
-    
-]
+    path('<slug>/detail', views.details, name='details'),
+    path('<slug>/inscricao', views.enrollment, name='enrollment'),
+] 

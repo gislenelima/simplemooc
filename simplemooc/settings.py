@@ -140,17 +140,18 @@ MEDIA_URL = '/media/'
 #E-mails
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-DEFAULT_FROM_EMAIL = 'Nome <vann.n.a0044@gmail.com>'
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'vann.n.a0044@gmail.com'
-EMAIL_HOST_PASSWORD = ''
+DEFAULT_FROM_EMAIL = 'Nome<email@email.com>'
+# DEFAULT_FROM_EMAIL = 'Nome <vann.n.a0044@gmail.com>'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'vann.n.a0044@gmail.com'
+# EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 
+CONTACT_EMAIL = 'contato@simplemooc.com'
 
 #Auth
 
-CONTACT_EMAIL = 'vann.n.a0044@gmail.com'
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL =  'logout'
